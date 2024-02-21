@@ -1,0 +1,8 @@
+def potencia_recursiva(b,e):
+    if b==1:
+        return 1
+    else:
+        return b*potencia_recursiva(b(e-1))
+z=potencia_recursiva (b,e))
+print (z)
+        
