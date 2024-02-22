@@ -1,0 +1,18 @@
+#factorial python
+def factorial(n):
+    if(n==0):
+       return 1
+    else:
+        return n*factorial(n-1)
+n= int(input("ingrese numero"))
+print("el factorial es",n,"es",factorial(n))
+
+#potencia pythonm
+def potencia(b,e):
+    if e==0:
+        return 1
+    else:
+        return b*potencia(b,(e-1))
+b=int(input("ingresa la base"))
+e=int(input("ingresa el exponente"))
+print(potencia(b,e))
