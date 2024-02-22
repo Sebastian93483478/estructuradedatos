@@ -1,0 +1,10 @@
+# cuadradoprint(ingrese la base)
+lado=int(input("ingrese el lado"))
+z=lado*lado
+print("el area es", z)
+
+#area triangulo
+b=int(input("ingrese la base")
+a=int(input("ingrese la altura"))
+area=b*a/2
+print("el resultado es;", area)
