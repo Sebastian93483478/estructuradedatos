@@ -1,0 +1,40 @@
+#include <iostream>
+#include "ListaEnlazada.h"
+
+using namespace std;
+
+void menuListaEnlazada() {
+	ListaEnlazada lista;
+	int opcion, dato, posicion;
+
+	do {
+		system("cls");
+		cout << "[-] Menu Lista Enlazada" << endl;
+		cout << "[1] Insertar" << endl;
+                cout << "[2] Quitar" << endl;
+                cout << "[3] Mostrar" << endl;
+cout << "[0] Volver" << endl;
+cout << "\nIngresa tu opcion: ";
+cin >> opcion;
+switch (opcion) {
+case 1:
+	cout << "Ingrese dato: ";
+	cin >> dato;
+	lista.insertar(dato);
+	break;
+case 2:
+	lista.quitar();
+	break;
+case 3:
+	lista.mostrar();
+	system("pause");
+	break;
+		case 0:
+			break;
+		default:
+			cout << "Por favor ingresa una opcion correcta.\n";
+			system("pause");
+			break;
+		}
+	} while (opcion != 0);
+}
