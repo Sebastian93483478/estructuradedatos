@@ -1,0 +1,37 @@
+#include "ListaEnlazada.h"
+#include <iostream>
+
+using namespace std;
+
+ListaEnlazada::ListaEnlazada() {
+	cabeza = nullptr;
+}
+
+ListaEnlazada::~ListaEnlazada() {
+	Nodo* actual = cabeza;
+	while (actual != nullptr) {
+		Nodo* siguiente = actual->siguiente;
+		delete actual;
+		actual = siguiente;
+	}
+}
+
+void ListaEnlazada::insertar(int dato) {
+	Nodo* nuevoNodo = new Nodo(dato);
+	nuevoNodo->siguiente = cabeza;
+	cabeza = nuevoNodo;
+}
+void ListaEnlazada::quitar() {
+	if (cabeza == nullptr) return;
+	Nodo* nodoAEliminar = cabeza;
+	cabeza = cabeza->siguiente;
+	delete nodoAEliminar;
+}
+void ListaEnlazada::mostrar() const {
+	Nodo* actual = cabeza;
+	while (actual != nullptr) {
+		cout << actual->dato << " ";
+		actual = actual->siguiente;
+	}
+	cout << endl;
+}
